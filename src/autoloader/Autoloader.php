@@ -1,4 +1,5 @@
 <?php
+
 class Autoloader{
     public static function registrar(){
         if (function_exists('__autoload')) {
@@ -32,7 +33,7 @@ class Autoloader{
                     return true;
                 }
             }else if($archivo != '.' && $archivo != '..'){
-                return self::buscarArchivo($rutaArchivo, $nobreArchivo);
+                self::buscarArchivo($rutaArchivo, $nobreArchivo);
                 //return;
             }
         }
